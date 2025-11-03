@@ -4,17 +4,24 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "body-parser": "^2.2.0",
+    "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "express-layouts": "^1.0.0",
-    "nodemo": "^1.0.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.15.3",
+    "nodemo": "^1.0.0"
+  },
+  "devDependencies": {
     "nodemon": "^3.1.10"
   }
-
 }
