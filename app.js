@@ -1,21 +1,22 @@
-const express = require('express')
-// var expressLayouts = require('express-ejs-layouts');
-const app = express()
-const port = 3000
 
-// app.use(expressLayouts);
+require('dotenv').config();
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+const port = process.env.PORT || 8000;
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-  
+
+
+
+//body parser
+app.use(bodyParser.urlencoded())
+app.use(bodyParser.json())
+
+
+app.get('/',(req,res)=>{
+   res.send('Admin Homepage')
 })
 
-app.get('/data',(req,res)=>{
-    res.json({
-        nama:"indrianssyah",
-        nohp:'0867484848'
-    })
-})
 
 app.listen(port, () => {
   console.log(`Example app listening on port http://localhost:${port}`)
