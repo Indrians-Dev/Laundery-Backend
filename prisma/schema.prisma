@@ -16,18 +16,18 @@ datasource db {
 model User {
   user_id          Int       @id @default(autoincrement())
   username         String    @db.VarChar(100)
-  password         String    @db.VarChar(100)
-  confirm_password String    @db.VarChar(100)
+  password         String    @db.VarChar(255)
   email            String    @unique @db.VarChar(100)
   nohp             Int?
   register_date    DateTime  @default(now())
-  token            String?   @db.VarChar(100)
+  token            String?   @db.VarChar(255)
   otp              String?   @db.VarChar(100)
   otp_expiry       DateTime?
+  reset_token      String?   @db.VarChar(255)
+  reset_token_expiry DateTime?
   is_verified      Boolean   @default(false)
   created_at       DateTime  @default(now())
   updated_at       DateTime  @updatedAt
 
   @@map("users")
 }
-

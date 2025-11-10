@@ -29,7 +29,6 @@ app.get('/', (req, res) => {
 // Routes
 app.use('/api/auth', userRouter);
 
-
 app.use('/',apiRouter);
 
 // Error middleware
