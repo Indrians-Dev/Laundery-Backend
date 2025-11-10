@@ -7,6 +7,7 @@ yarn-error.log*
 # Environment variables
 .env
 
+
 # Database
 /prisma/generated/
 *.db
@@ -45,4 +46,5 @@ Thumbs.db
 # Build outputs
 dist/
 build/
+.env
 .env
