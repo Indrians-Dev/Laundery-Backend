@@ -25,6 +25,8 @@ const bcrypt = require('bcrypt');
 const { v4: uuidv4 } = require('uuid');
 const nodemailer = require('nodemailer');
 require('dotenv').config();
+var jwt = require('jsonwebtoken');
+var cookieParser = require('cookie-parser')
 
 
 

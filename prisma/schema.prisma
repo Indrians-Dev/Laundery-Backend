@@ -30,3 +30,4 @@ model User {
 
   @@map("users")
 }
+
