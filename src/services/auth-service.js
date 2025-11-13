@@ -313,7 +313,7 @@ const forgotPassword = async (request) => {
         { expiresIn: '1h' }
     );
 
-    const resetTokenExpiry = new Date(Date.now() + 60 * 60 * 1000); // 1 hour
+    const resetTokenExpiry = new Date(Date.now() + 60 * 60 * 1000); 
 
     await prisma.user.update({
         where: { user_id: user.user_id },
