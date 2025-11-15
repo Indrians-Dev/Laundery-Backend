@@ -24,9 +24,7 @@
 const { register, login, verifyOtp, resendOtp, forgotPassword, resetPassword, getServices } = require('../services/auth-service');
 
 const regist = async (req, res, next) => {
-    try {
-        console.log('Request:', req.body);
-        
+    try {    
         const result = await register(req.body);
         res.status(201).json({ 
             success: true,

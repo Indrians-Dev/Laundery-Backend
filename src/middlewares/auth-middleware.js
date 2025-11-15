@@ -2,7 +2,6 @@ const { ResponseError } = require('../errors/response-error');
 const { verifyToken } = require('../services/auth-service');
 
 const authMiddleware = async (req, res, next) => {
-    console.log("request :" + req)
     try {
         const authHeader = req.headers.authorization;
         
