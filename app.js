@@ -8,13 +8,16 @@ const logger = require('./src/config/logger');
 const app = express();
 const port = process.env.PORT || 8000;
 
+const cors = require("cors")
+
+
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
-// Root route
-app.get('/', (req, res) => {
+app.get('/', cors(), (req, res) => {
+
   res.json({
     success: true,
     message: 'Laundery API Server is running!',
